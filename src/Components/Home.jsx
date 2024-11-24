@@ -16,7 +16,7 @@ function HomePage({imagecard, favGame,addToFavorites }){
         {
           imagecard.map(function (gamer, index) {
             return (
-              <div key={index} className=" flex flex-col cursor-pointer items-center overflow-hidden ">
+              <div key={index} className=" flex flex-col cursor-pointer items-center overflow-hidden relative">
                 <img className="w-80 m-1 h-48 transition-transform duration-300 ease-in-out transform hover:scale-110 " src={gamer.image} alt="" />
                 <p className="text-xl">{gamer.text}</p>
                

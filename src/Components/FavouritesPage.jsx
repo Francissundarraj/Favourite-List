@@ -1,5 +1,5 @@
 import React from "react";
-import border from "../assests/Border.png"
+import Border from "../assests/Border.png"
 
 function FavouritesPage({ favGame, removeFromFavorites }) {
     console.log(favGame)
@@ -8,7 +8,7 @@ function FavouritesPage({ favGame, removeFromFavorites }) {
             {favGame.length > 0 ? (
                 <div>
                     <h1 className="text-white text-center text-2xl">Your Gaming Hall of Fame</h1> 
-                    
+                     <img className="h-5" src={Border}/>
                     <div className="flex flex-wrap mt-10 gap-4 justify-around">
                         {favGame.map((gamer) => (
                             <div key={gamer.text} className="flex flex-col cursor-pointer items-center overflow-hidden">
