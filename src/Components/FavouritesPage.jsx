@@ -8,7 +8,10 @@ function FavouritesPage({ favGame, removeFromFavorites }) {
             {favGame.length > 0 ? (
                 <div>
                     <h1 className="text-white text-center text-2xl">Your Gaming Hall of Fame</h1> 
-                     <img className="h-5" src={Border}/>
+                    
+                    <div className="flex justify-center mt-2"> {/* Center the border image */}
+                        <img className="h-5" src={Border} alt="Border" />
+                    </div>
                     <div className="flex flex-wrap mt-10 gap-4 justify-around">
                         {favGame.map((gamer) => (
                             <div key={gamer.text} className="flex flex-col cursor-pointer items-center overflow-hidden">
@@ -16,9 +19,7 @@ function FavouritesPage({ favGame, removeFromFavorites }) {
                                 <p className="text-xl">{gamer.text}</p>
                                 <button
               onClick={() => removeFromFavorites(gamer)}
-              className=" shadow-xl rounded-md px-4 py-2 text-sm bg-cyan-800"
-            >
-              Remove
+              className=" shadow-xl rounded-md px-4 py-2 text-sm bg-cyan-800">Remove
             </button>
                             </div>
                             
